@@ -8,7 +8,7 @@ font-family:"Courier New";
 .eq{
 margin:0;
 padding:0;
-margin-bottom:3em;
+margin-bottom:8em;
 }
 .sol{
 display:inline-block;
