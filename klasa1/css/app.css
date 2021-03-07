@@ -431,3 +431,8 @@ button:hover{
     border:2px solid #f5c2c7;
 }
 
+@media screen and (max-width:640px){
+    .eq{
+        font-size:60px;
+    }
+}
