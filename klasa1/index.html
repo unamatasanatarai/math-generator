@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>math</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="fi">
+                <label>Minimum</label>
+                <input name="min" value=0 class="sm">
+            </div>
+            <div class="fi">
+                <label>Maksimum</label>
+                <input name="max" value=20 class="sm">
+            </div>
+            <div class="fi">
+                <button name="generuj" id="generuj">Nowe zadanie</button>
+            </div>
+        </header>
+        <section>
+            <div class="eq">
+                8+18
+            </div>
+            <div class="sol">
+                <label>Wpisz odpowiedź</label><br>
+                <input name="sol" id="solution"><br>
+                <button name="sprawdź" id="check">Sprawdź</button>
+            </div>
+        </section>
+        <div class="alert">TAK!</div>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
