@@ -11,7 +11,7 @@ rand = function(min, max) {
 function generate(low, hi, signs, count){
     let tokens = [];
     for(i = 0; i < count; i++){
-        sign = "+";
+        sign = signs[Math.floor(Math.random() * signs.length)]
         num = rand(low, hi);
         tokens.push(num);
         tokens.push(sign);
@@ -33,7 +33,20 @@ function wygenerujNowe(){
     s = {};
     s.min = 1*$('[name=min]').val();
     s.max = 1*$('[name=max]').val();
-    nums = generate(s.min, s.max, "+", 2);
+    s.elements = 1*$('[name=elements]').val();
+    s.signs = [];
+    if ($("#s_plus").is(":checked")){
+        s.signs.push("+");
+    }
+    if ($("#s_minus").is(":checked")){
+        s.signs.push("-");
+    }
+    while(true){
+        nums = generate(s.min, s.max, s.signs, s.elements);
+        if (nums.solution >= 0){
+            break;
+        }
+    }
     setEq(nums.eq, nums.solution);
     $("#solution").val("");
     $('.alert').hide();
