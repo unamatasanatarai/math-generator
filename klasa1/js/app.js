@@ -48,10 +48,11 @@ function wygenerujNowe(){
         }
     }
     setEq(nums.eq, nums.solution);
-    $("#solution").val("");
+    $("#solution").val("").focus();
     $('.alert').hide();
 }
-function sprawdzOdpowiedz(){
+function sprawdzOdpowiedz(e){
+    e.preventDefault();
     let ua = 1*$("#solution").val();
     let ea = 1*$(".eq").data('answer');
     if (ua == ea){
@@ -59,6 +60,7 @@ function sprawdzOdpowiedz(){
     }else{
         notify("Spróbuj jeszcze raz", false)
     }
+    $("#solution").focus();
 }
 
 function notify(msg, succ){
@@ -68,6 +70,7 @@ function notify(msg, succ){
 $(document).ready(() => {
     $(document).on('click', '#generuj', e => {e.preventDefault(); wygenerujNowe()});
     $(document).on('click', '#check', sprawdzOdpowiedz);
+    $(document).on('submit', '#solution', sprawdzOdpowiedz);
     wygenerujNowe();
 })
 
