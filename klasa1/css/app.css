@@ -430,6 +430,15 @@ button:hover{
     color:#842029;
     border:2px solid #f5c2c7;
 }
+.generuj{
+    margin:10px auto;
+    display:block;
+    padding:20px 80px;
+    font-weight:600;
+    background:#cfe2ff;
+    color:#084298;
+    border:1px solid #b6d4fe;
+}
 
 @media screen and (max-width:640px){
     .eq{
