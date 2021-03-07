@@ -443,5 +443,9 @@ button:hover{
 @media screen and (max-width:640px){
     .eq{
         font-size:60px;
+        padding:40px 0;
+    }
+    .alert{
+        font-size:12px;
     }
 }
