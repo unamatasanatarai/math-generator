@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>math</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="fi">
+                <label>Min</label>
+                <input name="min" value=10 class="sm">
+            </div>
+            <div class="fi">
+                <label>Max</label>
+                <input name="max" value=1000000 class="sm">
+            </div>
+            <div class="fi">
+                <label>Ile</label>
+                <input name="elements" value=15 class="sm">
+            </div>
+            <div class="fi">
+                <label><input type=checkbox name=plus id=s_plus checked>Dodawanie </label>
+                <label><input type=checkbox name=minus id=s_minus checked>Odejmowanie </label>
+                <label><input type=checkbox name=mul id=s_mul checked>Mnożenie </label>
+            </div>
+            <div class="fi">
+                <button name="generuj" id="generuj" class="generuj">Wygeneruj</button>
+            </div>
+        </header>
+        <template class="tsol">
+            <div class="sl">
+                <small>LP.</small>
+                <span>NUM</span>
+            </div>
+        </template>
+        <template class="teq">
+            <div class="eq">
+                <small>LP.</small>
+                <div>NUM1</div>
+                <div><i>SIGN</i> NUM2</div>
+            </div>
+        </template>
+        <section class="clearfix eqs">
+        </section>
+
+        <section class="sol">
+        </section>
+        <div class="alert">TAK!</div>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
